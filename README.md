@@ -3,7 +3,7 @@
 An AI-inspired web application that helps users estimate and manage their expenses efficiently.
 
 ## 🚀 Live Demo
-https://yourusername.github.io/smart-expense-tool/
+(https://smart-expense-tool.vercel.app/)
 
 ---
 
