@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Smart Expense Prediction Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Smart Expense Predictor</h1>
+            <p class="subtitle">Advanced Financial Planning with AI-like Insights</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section card">
+                <h2>Your Financial Inputs</h2>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="monthlyIncome">Monthly Income (INR)</label>
+                        <input type="number" id="monthlyIncome" placeholder="e.g. 50000" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="savingsGoal">Savings Goal (INR)</label>
+                        <input type="number" id="savingsGoal" placeholder="e.g. 15000" min="0">
+                    </div>
+                </div>
+
+                <h3>Daily Expenses by Category</h3>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="foodExpense">Food</label>
+                        <input type="number" id="foodExpense" class="category-input" placeholder="0" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="travelExpense">Travel</label>
+                        <input type="number" id="travelExpense" class="category-input" placeholder="0" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="shoppingExpense">Shopping</label>
+                        <input type="number" id="shoppingExpense" class="category-input" placeholder="0" min="0">
+                    </div>
+                </div>
+                
+                <button id="calculateBtn" class="primary-btn">Analyze Spending</button>
+            </div>
+
+            <div id="results" class="results-grid hidden">
+                <div class="result-card card animate-up">
+                    <span class="card-icon">📅</span>
+                    <span class="label">Monthly Expense</span>
+                    <span class="value" id="monthlyResult">₹0</span>
+                </div>
+                <div class="result-card card animate-up" style="animation-delay: 0.1s;">
+                    <span class="card-icon">🚀</span>
+                    <span class="label">Yearly Expense</span>
+                    <span class="value" id="yearlyResult">₹0</span>
+                </div>
+                <div class="result-card card animate-up" style="animation-delay: 0.2s;">
+                    <span class="card-icon">📊</span>
+                    <span class="label">Income Spent</span>
+                    <span class="value" id="percentResult">0%</span>
+                </div>
+                
+                <div class="analysis-card card animate-up full-width" style="animation-delay: 0.3s;">
+                    <div class="analysis-content">
+                        <div id="categoryAnalysis" class="analysis-item">
+                            <span class="label">Top Category:</span>
+                            <span class="value" id="topCategoryResult">-</span>
+                        </div>
+                        <div id="savingsStatus" class="analysis-item">
+                            <span class="label">Savings Status:</span>
+                            <span class="value" id="savingsStatusResult">-</span>
+                        </div>
+                    </div>
+                    <div id="suggestionBox" class="suggestion-box">
+                        <!-- Smart AI-like suggestions appear here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
